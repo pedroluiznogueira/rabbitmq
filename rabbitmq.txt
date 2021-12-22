@@ -79,3 +79,14 @@
 -> exchanges are like the airport of this city
 -> bidings are the routes to arrive from the airport to the city
 -> there can be zero or many routes possible to reach it
+
+# What if the message can't be routed to the queue ?
+-> imagine there are no bidings for the exchange the message was published to
+-> the message is either dropped or returned to the publisher
+-> it depends on the message attributes the publisher has set
+-> publisher attributes are very useful
+
+# Main difference between RabbitMQ and Kafka
+-> kafka has descentralized broker 
+-> brokerless, distributed or cloud based
+
