@@ -1,5 +1,13 @@
 # RabbitMQ
 
+# Running it on localhost:15672
+-> go to C:\Program Files\RabbitMQ Server\rabbitmq_server-3.9.11\sbin
+-> ls to see all .bat scripts files
+-> rabbitmq-plugins.bat enable rabbitmq_management
+-> you can enable/disable it
+-> go to localhost:15672 
+-> username: guest and password: guest
+
 # What is message and why we need it ?
 -> SOAP protocol has message, header and body
 -> asynchronous, different for a synchronous http request
