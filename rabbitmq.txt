@@ -1,0 +1,48 @@
+# RabbitMQ
+
+# What is message and why we need it ?
+-> SOAP protocol has message, header and body
+-> asynchronous, different for a synchronous http request
+-> example:
+-> customers messages, orders comming in a huge load
+-> we can process them one by one
+-> we use advanced messaging to encapsulate any kind of information
+-> queues, topics, channels, exchanges, depends on the protocol definition
+
+# Messaging Protocols
+-> most used are STOMP, MQTT and MQP
+-> STOMP is a text-oriented messaging protocols (simple messages)
+-> MQTT macchine to machine
+-> AMQP is advanced messaging protocols protocol
+
+# What AMQP solves ?
+-> completely different systems to exchange messages
+-> vendor A publishes the message to broker and vendor B receives the message from broker  
+-> diverse programming languages can communicate easily
+-> enables messaging as a cloud service
+
+# RabbitMQ features
+-> supports clustering for fault tolerance and scalability
+-> multiple connections in a single TCP connection
+-> delegate less process
+
+# Actors of Messaging
+-> producer produces a message eich is sent to a exchange
+-> through the exchange the message is routed to a queue
+-> a consumer recieves the messages from the queue
+
+# Exchanges
+-> first to receive the message
+-> routes a message to one or more queue
+-> routing algorithms dependes on exchange types and "bidings"
+-> "biding" is nothing more than a configuration to bind exchanges to queues
+-> types:
+->
+-> direct = empty string and amq.direct
+-> fanout = amq.fanout
+-> topic = amq.topic (user purchased, for example)
+-> headers = amq.match and amq.headers
+
+# Queues
+-> messages arrive from exchanges to queues
+-> 
